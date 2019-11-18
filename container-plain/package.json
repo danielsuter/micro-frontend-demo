@@ -1,0 +1,13 @@
+{
+  "name": "container-plain",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "serve --port 5000 --cors app"
+  },
+  "author": "Daniel Suter",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^6.5.2"
+  }
+}
