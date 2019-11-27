@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class Ng8ElementComponent implements OnInit {
 
-    @Input() event: Event;
+    @Input() event: string;
 
     constructor() {
     }
