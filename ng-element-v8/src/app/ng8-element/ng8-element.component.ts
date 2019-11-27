@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
     selector: 'app-ng8-element',
@@ -9,9 +9,15 @@ export class Ng8ElementComponent implements OnInit {
 
     @Input() event: string;
 
+    @Output('broadcast') eventEmitter = new EventEmitter();
+
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+    onClick() {
+        this.eventEmitter.emit({message: 'hi from NG8'});
     }
 }

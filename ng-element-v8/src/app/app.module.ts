@@ -11,7 +11,7 @@ import {createCustomElement} from "@angular/elements";
         Ng8ElementComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
     ],
     providers: [],
     entryComponents: [Ng8ElementComponent],
