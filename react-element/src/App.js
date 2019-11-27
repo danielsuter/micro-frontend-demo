@@ -7,9 +7,11 @@ const App = () => {
     const dispatch = useContext(EventContext);
 
     const handleClick = () => {
-        const event = new Event('my-event');
-        console.log('click');
-        ;
+        const event = new CustomEvent('broadcast', {
+            detail: {
+                customData: 'complex data'
+            },
+        });
         dispatch(event);
     };
 

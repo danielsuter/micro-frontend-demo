@@ -22,5 +22,15 @@
 <script src="http://localhost:5002/ng7bundle.js" type="module"></script>
 <script src="http://localhost:5003/componentBundle.js" type="module"></script>
 
+<script>
+    function globalListener(event) {
+        console.log(`received event from ${event.target.tagName} with details ${JSON.stringify(event.detail)}`);
+    }
+
+    document.querySelector('react-element').addEventListener('broadcast', globalListener);
+    document.querySelector('ng7-element-component').addEventListener('broadcast', globalListener);
+    document.querySelector('ng8-element-component').addEventListener('broadcast', globalListener);
+</script>
+
 </body>
 </html>
