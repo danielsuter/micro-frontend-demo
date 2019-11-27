@@ -7,7 +7,7 @@
     "start:dist": "serve --port 5002 --cors dist",
     "build": "ng build",
     "build:elements": "ng build --prod --output-hashing=none",
-    "postbuild:elements": "node bundle.js",
+    "postbuild:elements": "node bundler.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
