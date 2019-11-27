@@ -1,0 +1,12 @@
+{
+  "name": "ng-element-v7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular/cli": "7.3.9"
+  }
+}
