@@ -3,7 +3,7 @@ import {EventContext, Styled} from 'direflow-component';
 import {propTypes} from './componentProperties';
 import styles from './App.css';
 
-const App = () => {
+const App = (props) => {
     const dispatch = useContext(EventContext);
 
     const handleClick = () => {
@@ -18,6 +18,7 @@ const App = () => {
     return (
         <Styled styles={styles}>
             <div className='app'>
+                {props.event}
                 <div className='header-title'>React Component</div>
                 <button className='button' onClick={handleClick}>
                     Let's go!

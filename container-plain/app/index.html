@@ -30,9 +30,10 @@
     function globalListener(event) {
         console.log(`received event from ${event.target.tagName} with details ${JSON.stringify(event.detail)}`);
 
-        ng8Element.setAttribute("event", `${event.target.tagName} -> ${event.detail.message}`);
-        ng7Element.setAttribute("event", `${event.target.tagName} -> ${event.detail.message}`);
-        reactElement.setAttribute("event", `${event.target.tagName} -> ${event.detail.message}`);
+        const message = `${event.target.tagName} -> ${event.detail.message}`;
+        ng8Element.setAttribute("event", message);
+        ng7Element.setAttribute("event", message);
+        reactElement.event = message;
     }
 
     reactElement.addEventListener('broadcast', globalListener);
