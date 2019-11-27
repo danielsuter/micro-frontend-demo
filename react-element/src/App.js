@@ -9,7 +9,7 @@ const App = () => {
     const handleClick = () => {
         const event = new CustomEvent('broadcast', {
             detail: {
-                customData: 'complex data'
+                message: 'React says hi'
             },
         });
         dispatch(event);

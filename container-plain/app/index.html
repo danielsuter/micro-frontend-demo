@@ -23,13 +23,21 @@
 <script src="http://localhost:5003/componentBundle.js" type="module"></script>
 
 <script>
+    const reactElement = document.querySelector('react-element');
+    const ng7Element = document.querySelector('ng7-element-component');
+    const ng8Element = document.querySelector('ng8-element-component');
+
     function globalListener(event) {
         console.log(`received event from ${event.target.tagName} with details ${JSON.stringify(event.detail)}`);
+
+        ng8Element.setAttribute("event", `${event.target.tagName} -> ${event.detail.message}`);
+        ng7Element.setAttribute("event", `${event.target.tagName} -> ${event.detail.message}`);
+        reactElement.setAttribute("event", `${event.target.tagName} -> ${event.detail.message}`);
     }
 
-    document.querySelector('react-element').addEventListener('broadcast', globalListener);
-    document.querySelector('ng7-element-component').addEventListener('broadcast', globalListener);
-    document.querySelector('ng8-element-component').addEventListener('broadcast', globalListener);
+    reactElement.addEventListener('broadcast', globalListener);
+    ng7Element.addEventListener('broadcast', globalListener);
+    ng8Element.addEventListener('broadcast', globalListener);
 </script>
 
 </body>
