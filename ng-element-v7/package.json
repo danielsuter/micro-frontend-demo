@@ -40,6 +40,6 @@
     "typescript": "~3.2.2",
     "concat-files": "^0.1.1",
     "replace-in-file": "^4.2.0",
-    "serve": "^6.5.2"
+    "serve": "^10.1.2"
   }
 }
