@@ -8,6 +8,6 @@
   "author": "Daniel Suter",
   "license": "ISC",
   "devDependencies": {
-    "serve": "^6.5.2"
+    "serve": "^10.1.2"
   }
 }
